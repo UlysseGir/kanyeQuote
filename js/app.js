@@ -9,9 +9,16 @@ function newQuote(){
             if(double.includes(data.quote)){
                 newQuote();
             } else {
-                const quote = document.createElement("div")
+                const quote = document.createElement("div");
+                quote.className = "quote" ///
+                const up = document.createElement("button");
+                const down = document.createElement("button");
                 quotes.appendChild(quote);
+                quote.appendChild(up);
+                quote.appendChild(down);
                 quote.textContent = data.quote;
+                up.textContent = "up";
+                down.textContent = "down";
             }
             double.push(data.quote);
     }).catch((error) => console.log(error));  
