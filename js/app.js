@@ -9,14 +9,14 @@ function newQuote(){
             if(double.includes(data.quote)){
                 newQuote();
             } else {
-                const quote = document.createElement("div");
+                const quote = document.createElement("li");
                 quote.className = "quote" ///
                 const up = document.createElement("button");
                 const down = document.createElement("button");
+                quote.textContent = data.quote;
                 quotes.appendChild(quote);
                 quote.appendChild(up);
                 quote.appendChild(down);
-                quote.textContent = data.quote;
                 up.textContent = "up";
                 down.textContent = "down";
             }
