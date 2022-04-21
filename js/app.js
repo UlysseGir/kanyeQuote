@@ -32,7 +32,14 @@ function newQuote(){
                 const btnDowns = document.getElementsByClassName("down")
                 for(let btnUp of btnUps){
                     btnUp.addEventListener("click", function(){
-                        console.log("test");
+                        quote.insertAdjacentElement("beforebegin", (btnUp.parentElement).previousElementSibling)
+
+                    })
+                }
+                for(let btnDown of btnDowns){
+                    btnDown.addEventListener("click", function(){
+                        quote.insertAdjacentElement("afterbegin", (btnDown.parentElement).nextElementSibling)
+
                     })
                 }
             }
